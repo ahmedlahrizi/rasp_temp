@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Temp</title>
+    <link rel="stylesheet" href="{% static "css/style.css" %}">
+</head>
+<header>
+    <p>Bienvenue !</p>
+    <img src="https://upload.wikimedia.org/wikipedia/fr/thumb/3/3b/Raspberry_Pi_logo.svg/1200px-Raspberry_Pi_logo.svg.png"
+         alt="rasperry">
+</header>
+<body>
+    <p>La temperature du rasperry est de:
+       <span class={{ class }}>
+            {{ temp|safe }}
+       </span>
+    </p>
+    {% if hot %}
+        <img src="https://emoji.gg/assets/emoji/hot.png" alt="hot">
+    {% else %}
+        <img src="https://emoji.gg/assets/emoji/7655_freezing.png" alt="cold">
+    {% endif %}
+    <p>Merci de ne pas envoyer trop de requêtes au serveur (il va cramer)</p>
+</body>
+<footer>
+    <p>Ahmed LAHRIZI</p>
+</footer>
+</html>
