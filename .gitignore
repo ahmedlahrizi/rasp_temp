@@ -1,5 +1,5 @@
 rasperry_temp/key.py
 db.sqlite3
-.idea
-rasperry_temp/__pycache__
-temp/__pycache__
+.idea/
+rasperry_temp/__pycache__/
+temp/__pycache__/

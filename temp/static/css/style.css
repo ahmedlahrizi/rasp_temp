@@ -1,3 +1,111 @@
+/*noinspection CssUnknownTarget*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+/*noinspection CssUnknownTarget*/
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: "Roboto", "Lucida Grande", "DejaVu Sans", "Bitstream Vera Sans", Verdana, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background-color: #26293d;
+}
+
 header {
-    width: min(30rem, 100%);
+    background-color: #1E1E2D;
+    width: 100%;
+}
+
+nav {
+    width: min(70rem, 100%);
+    margin: auto;
+    font-size: 3rem;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    justify-content: start;
+    height: 7rem;
+}
+
+header *:last-child {
+    margin-left: auto;
+}
+
+nav > img {
+    width: 4rem;
+    height: 4rem;
+}
+
+nav > h5 {
+    color: #FFF;
+}
+
+body * {
+    color: #FFFFFFB2;
+}
+
+body {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 3rem;
+}
+
+.info {
+    font-weight: 100;
+    color: #FFF;
+    align-self: center;
+    margin-top: 2rem;
+}
+
+body > img {
+    width: 10rem;
+    align-self: end;
+    margin-right: 3rem;
+}
+
+.cold {
+    color: #90c5ff;
+}
+
+.hot {
+    color: #de3f6a;
+}
+
+footer * {
+    color: #5dbbba;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: bold;
+    font-size: 2rem;
+    margin-left: 2rem;
+}
+
+body > p {
+    font-size: 2rem;
+    color: #FFFFFF;
+    align-self: center;
+}
+
+@media all and (max-width: 70.6875rem ) {
+    :root {
+        font-size: .8rem;
+    }
+}
+
+@media all and (max-width: 50rem ) {
+    :root {
+        font-size: .7rem;
+    }
+}
+
+@media all and (max-width: 41.875rem ) {
+    :root {
+        font-size: .4rem;
+    }
+    nav *:first-child {
+        margin-left: 5px;
+    }
 }

@@ -8,28 +8,35 @@
     <link rel="stylesheet" href="{% static "css/style.css" %}">
     <script async defer src="https://buttons.github.io/buttons.js"></script>
 </head>
-<header>
-    <p>Bienvenue !</p>
-    <img src="https://upload.wikimedia.org/wikipedia/fr/thumb/3/3b/Raspberry_Pi_logo.svg/1200px-Raspberry_Pi_logo.svg.png"
-         alt="rasperry">
-</header>
+
 <body>
-    <p>La temperature du rasperry est de:
-       <span class={{ class }}>
+    <header>
+        <nav>
+            <h5>Température du rasperry</h5>
+            <img src="https://upload.wikimedia.org/wikipedia/fr/thumb/3/3b/Raspberry_Pi_logo.svg/1200px-Raspberry_Pi_logo.svg.png"
+                 alt="rasperry">
+            <a class="github-button" href="https://github.com/ahmedlahrizi/rasp_temp"
+               data-icon="octicon-star" data-size="large" data-show-count="true"
+               aria-label="Star ahmedlahrizi/rasp_temp on GitHub">Star</a>
+        </nav>
+    </header>
+    <div class="info">
+        <h1>La temperature du rasperry est de:
+            <span class={{ class }}>
             {{ temp|safe }}
        </span>
-    </p>
+        </h1>
+    </div>
+
     {% if hot %}
         <img src="https://emoji.gg/assets/emoji/hot.png" alt="hot">
     {% else %}
         <img src="https://emoji.gg/assets/emoji/7655_freezing.png" alt="cold">
     {% endif %}
     <p>Merci de ne pas envoyer trop de requêtes au serveur (il va cramer)</p>
+
+    <footer>
+        <p>Ahmed LAHRIZI</p>
+    </footer>
 </body>
-<footer>
-    <p>Ahmed LAHRIZI</p>
-    <a class="github-button" href="https://github.com/ahmedlahrizi/rasp_temp"
-        data-icon="octicon-star" data-size="large" data-show-count="true"
-        aria-label="Star ahmedlahrizi/rasp_temp on GitHub">Star</a>
-</footer>
 </html>
